@@ -8,13 +8,12 @@ class SchoolClassesController < ApplicationController
     def new
         binding.pry
     end
-
     def create
-        binding.pry
+        @school_class = SchoolClass.create(params[:school_class])
     end
 
     def show
-        binding.pry
+        @school_class = SchoolClass.find(params[:id])
     end
 
     def edit

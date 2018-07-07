@@ -1,7 +1,6 @@
 require "pry"
 class StudentsController < ApplicationController
     def index
-        binding.pry
     end
 
     def new
@@ -9,11 +8,12 @@ class StudentsController < ApplicationController
     end
 
     def create
+        @student = Student.create(params[:student])
         binding.pry
     end
 
     def show
-        binding.pry
+        @student = Student.find(params[:id])
     end
 
     def edit
